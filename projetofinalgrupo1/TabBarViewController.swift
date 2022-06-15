@@ -38,7 +38,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func favoriteController()  -> UINavigationController {
-    let favoriteController = BlueViewController()
+    let favoriteController = FavoriteViewController()
     favoriteController.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName:"star.fill"), tag: 0)
     let navigationController = UINavigationController(rootViewController: favoriteController)
     return navigationController

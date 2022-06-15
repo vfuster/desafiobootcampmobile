@@ -13,11 +13,11 @@
 		5E9412EE2859FB2C009531BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412ED2859FB2C009531BF /* Assets.xcassets */; };
 		5E9412F12859FB2C009531BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412EF2859FB2C009531BF /* LaunchScreen.storyboard */; };
 		5E9412FA285A0F10009531BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412F8285A0F10009531BF /* HomeViewController.swift */; };
-		5E9412FB285A0F10009531BF /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412F9285A0F10009531BF /* RedViewController.xib */; };
+		5E9412FB285A0F10009531BF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412F9285A0F10009531BF /* HomeViewController.xib */; };
 		5E9412FE285A172F009531BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412FC285A172F009531BF /* RegisterViewController.swift */; };
-		5E9412FF285A172F009531BF /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412FD285A172F009531BF /* GreenViewController.xib */; };
+		5E9412FF285A172F009531BF /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412FD285A172F009531BF /* RegisterViewController.xib */; };
 		5E941302285A28B9009531BF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E941300285A28B9009531BF /* FavoriteViewController.swift */; };
-		5E941303285A28B9009531BF /* BlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E941301285A28B9009531BF /* BlueViewController.xib */; };
+		5E941303285A28B9009531BF /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E941301285A28B9009531BF /* FavoriteViewController.xib */; };
 		5E94130A285A2B69009531BF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E941308285A2B69009531BF /* TabBarViewController.swift */; };
 		5E94130B285A2B69009531BF /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E941309285A2B69009531BF /* TabBarViewController.xib */; };
 /* End PBXBuildFile section */
@@ -31,11 +31,11 @@
 		5E9412F02859FB2C009531BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E9412F22859FB2C009531BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9412F8285A0F10009531BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5E9412F9285A0F10009531BF /* RedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedViewController.xib; sourceTree = "<group>"; };
+		5E9412F9285A0F10009531BF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		5E9412FC285A172F009531BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		5E9412FD285A172F009531BF /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
+		5E9412FD285A172F009531BF /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		5E941300285A28B9009531BF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		5E941301285A28B9009531BF /* BlueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
+		5E941301285A28B9009531BF /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		5E941308285A2B69009531BF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5E941309285A2B69009531BF /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,13 +55,13 @@
 			isa = PBXGroup;
 			children = (
 				5E941300285A28B9009531BF /* FavoriteViewController.swift */,
-				5E941301285A28B9009531BF /* BlueViewController.xib */,
+				5E941301285A28B9009531BF /* FavoriteViewController.xib */,
 				5E941308285A2B69009531BF /* TabBarViewController.swift */,
 				5E941309285A2B69009531BF /* TabBarViewController.xib */,
 				5E9412F8285A0F10009531BF /* HomeViewController.swift */,
-				5E9412F9285A0F10009531BF /* RedViewController.xib */,
+				5E9412F9285A0F10009531BF /* HomeViewController.xib */,
 				5E9412FC285A172F009531BF /* RegisterViewController.swift */,
-				5E9412FD285A172F009531BF /* GreenViewController.xib */,
+				5E9412FD285A172F009531BF /* RegisterViewController.xib */,
 				5E9412E32859FB2B009531BF /* projetofinalgrupo1 */,
 				5E9412E22859FB2B009531BF /* Products */,
 			);
@@ -146,9 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E941303285A28B9009531BF /* BlueViewController.xib in Resources */,
-				5E9412FB285A0F10009531BF /* RedViewController.xib in Resources */,
-				5E9412FF285A172F009531BF /* GreenViewController.xib in Resources */,
+				5E941303285A28B9009531BF /* FavoriteViewController.xib in Resources */,
+				5E9412FB285A0F10009531BF /* HomeViewController.xib in Resources */,
+				5E9412FF285A172F009531BF /* RegisterViewController.xib in Resources */,
 				5E9412F12859FB2C009531BF /* LaunchScreen.storyboard in Resources */,
 				5E94130B285A2B69009531BF /* TabBarViewController.xib in Resources */,
 				5E9412EE2859FB2C009531BF /* Assets.xcassets in Resources */,
