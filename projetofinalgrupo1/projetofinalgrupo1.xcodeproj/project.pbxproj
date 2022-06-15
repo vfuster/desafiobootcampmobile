@@ -12,9 +12,9 @@
 		5E9412EC2859FB2B009531BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412EA2859FB2B009531BF /* Main.storyboard */; };
 		5E9412EE2859FB2C009531BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412ED2859FB2C009531BF /* Assets.xcassets */; };
 		5E9412F12859FB2C009531BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412EF2859FB2C009531BF /* LaunchScreen.storyboard */; };
-		5E9412FA285A0F10009531BF /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412F8285A0F10009531BF /* RedViewController.swift */; };
+		5E9412FA285A0F10009531BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412F8285A0F10009531BF /* HomeViewController.swift */; };
 		5E9412FB285A0F10009531BF /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412F9285A0F10009531BF /* RedViewController.xib */; };
-		5E9412FE285A172F009531BF /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412FC285A172F009531BF /* GreenViewController.swift */; };
+		5E9412FE285A172F009531BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9412FC285A172F009531BF /* RegisterViewController.swift */; };
 		5E9412FF285A172F009531BF /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9412FD285A172F009531BF /* GreenViewController.xib */; };
 		5E941302285A28B9009531BF /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E941300285A28B9009531BF /* FavoriteViewController.swift */; };
 		5E941303285A28B9009531BF /* BlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E941301285A28B9009531BF /* BlueViewController.xib */; };
@@ -30,9 +30,9 @@
 		5E9412ED2859FB2C009531BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E9412F02859FB2C009531BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E9412F22859FB2C009531BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E9412F8285A0F10009531BF /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		5E9412F8285A0F10009531BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5E9412F9285A0F10009531BF /* RedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedViewController.xib; sourceTree = "<group>"; };
-		5E9412FC285A172F009531BF /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		5E9412FC285A172F009531BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5E9412FD285A172F009531BF /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
 		5E941300285A28B9009531BF /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		5E941301285A28B9009531BF /* BlueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 				5E941301285A28B9009531BF /* BlueViewController.xib */,
 				5E941308285A2B69009531BF /* TabBarViewController.swift */,
 				5E941309285A2B69009531BF /* TabBarViewController.xib */,
-				5E9412F8285A0F10009531BF /* RedViewController.swift */,
+				5E9412F8285A0F10009531BF /* HomeViewController.swift */,
 				5E9412F9285A0F10009531BF /* RedViewController.xib */,
-				5E9412FC285A172F009531BF /* GreenViewController.swift */,
+				5E9412FC285A172F009531BF /* RegisterViewController.swift */,
 				5E9412FD285A172F009531BF /* GreenViewController.xib */,
 				5E9412E32859FB2B009531BF /* projetofinalgrupo1 */,
 				5E9412E22859FB2B009531BF /* Products */,
@@ -163,9 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9412FE285A172F009531BF /* GreenViewController.swift in Sources */,
+				5E9412FE285A172F009531BF /* RegisterViewController.swift in Sources */,
 				5E9412E92859FB2B009531BF /* ViewController.swift in Sources */,
-				5E9412FA285A0F10009531BF /* RedViewController.swift in Sources */,
+				5E9412FA285A0F10009531BF /* HomeViewController.swift in Sources */,
 				5E941302285A28B9009531BF /* FavoriteViewController.swift in Sources */,
 				5E94130A285A2B69009531BF /* TabBarViewController.swift in Sources */,
 				5E9412E52859FB2B009531BF /* AppDelegate.swift in Sources */,
