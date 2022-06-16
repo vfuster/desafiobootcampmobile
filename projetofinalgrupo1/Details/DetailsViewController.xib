@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="projetofinalgrupo1" customModuleProvider="target">
             <connections>
-                <outlet property="animalLabel" destination="Mra-0e-6mc" id="iqa-j8-tp5"/>
                 <outlet property="descriptionLabel" destination="vFC-f8-d22" id="8dM-Vc-0RE"/>
-                <outlet property="image" destination="kqd-Pa-cci" id="Ytw-em-N7g"/>
+                <outlet property="imageView" destination="kqd-Pa-cci" id="Ytw-em-N7g"/>
                 <outlet property="nameLabel" destination="lyG-8U-ltK" id="Fgg-JA-CaA"/>
+                <outlet property="specieLabel" destination="Mra-0e-6mc" id="iqa-j8-tp5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="RsR-Be-8fL"/>
             </connections>
         </placeholder>
