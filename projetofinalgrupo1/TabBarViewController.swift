@@ -12,7 +12,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setViewControllers([redController(),greenController(),blueController()], animated: true)
+        setViewControllers([homeController(),registerController(),favoriteController()], animated: true)
         selectedIndex = 0
         setupTabBar()
     }
@@ -23,24 +23,24 @@ class TabBarViewController: UITabBarController {
         tabBar.isTranslucent = false
     }
   
-    private func redController()  -> UINavigationController {
-    let redController = RedViewController()
-    redController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName:"house.fill"), tag: 0)
-    let navigationController = UINavigationController(rootViewController: redController)
+    private func homeController()  -> UINavigationController {
+    let HomeController = HomeViewController()
+    HomeController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName:"house.fill"), tag: 0)
+    let navigationController = UINavigationController(rootViewController: HomeController)
     return navigationController
     }
     
-    private func greenController()  -> UINavigationController {
-    let greenController = GreenViewController()
-    greenController.tabBarItem = UITabBarItem(title: "Cadastrar", image: UIImage(systemName:"plus.circle"), tag: 0)
-    let navigationController = UINavigationController(rootViewController: greenController)
+    private func registerController()  -> UINavigationController {
+    let registerController = RegisterViewController()
+    registerController.tabBarItem = UITabBarItem(title: "Cadastrar", image: UIImage(systemName:"plus.circle"), tag: 0)
+    let navigationController = UINavigationController(rootViewController: registerController)
     return navigationController
     }
     
-    private func blueController()  -> UINavigationController {
-    let blueController = BlueViewController()
-    blueController.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName:"star.fill"), tag: 0)
-    let navigationController = UINavigationController(rootViewController: blueController)
+    private func favoriteController()  -> UINavigationController {
+    let favoriteController = FavoriteViewController()
+    favoriteController.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName:"star.fill"), tag: 0)
+    let navigationController = UINavigationController(rootViewController: favoriteController)
     return navigationController
     }
  }
