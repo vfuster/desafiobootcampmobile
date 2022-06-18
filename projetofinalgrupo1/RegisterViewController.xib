@@ -11,26 +11,80 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="projetofinalgrupo1" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="tJT-wJ-IeC" id="NY6-Kh-dPg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="tJT-wJ-IeC">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3P4-hY-y8S">
-                    <rect key="frame" x="187" y="833.5" width="55" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r65-AC-etL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="391"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-CA-rFG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="cee-F5-ZCG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link Imagem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVz-rd-tUy">
+                            <rect key="frame" x="0.0" y="72" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="6HR-SE-ZA6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-Gc-hxN">
+                            <rect key="frame" x="0.0" y="144" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="PbL-NV-dUp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Especie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QR-Bw-Uce">
+                            <rect key="frame" x="0.0" y="216" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="2F5-2d-gcX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-s7-lNo">
+                            <rect key="frame" x="0.0" y="288" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="KcM-9E-2Qx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFK-hv-Res">
+                            <rect key="frame" x="0.0" y="360" width="414" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="Hh5-lX-AQX"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cadastrar"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="n4J-n9-dP1"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+            <constraints>
+                <constraint firstItem="n4J-n9-dP1" firstAttribute="trailing" secondItem="r65-AC-etL" secondAttribute="trailing" id="9RJ-pG-2Wu"/>
+                <constraint firstItem="r65-AC-etL" firstAttribute="leading" secondItem="n4J-n9-dP1" secondAttribute="leading" id="a1s-Zy-HhF"/>
+                <constraint firstItem="n4J-n9-dP1" firstAttribute="bottom" secondItem="r65-AC-etL" secondAttribute="bottom" id="auc-kE-84I"/>
+                <constraint firstItem="r65-AC-etL" firstAttribute="top" secondItem="n4J-n9-dP1" secondAttribute="top" id="ct9-jR-JUA"/>
+            </constraints>
+            <point key="canvasLocation" x="112" y="-698"/>
         </view>
     </objects>
     <resources>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
