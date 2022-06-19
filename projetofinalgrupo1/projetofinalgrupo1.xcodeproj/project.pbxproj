@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245D0DF6285E646400573E65 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D0DF5285E646400573E65 /* Colors.swift */; };
 		39920225285B8E640088325F /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39920224285B8E640088325F /* AnimalModel.swift */; };
 		39D0396E285A6A9000378906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D0396C285A6A9000378906 /* DetailsViewController.swift */; };
 		39D0396F285A6A9000378906 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D0396D285A6A9000378906 /* DetailsViewController.xib */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245D0DF5285E646400573E65 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		39920224285B8E640088325F /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		39D0396C285A6A9000378906 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		39D0396D285A6A9000378906 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245D0DF4285E645000573E65 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				245D0DF5285E646400573E65 /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		39920223285B8DF60088325F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		5E9412D82859FB2A009531BF = {
 			isa = PBXGroup;
 			children = (
+				245D0DF4285E645000573E65 /* Utils */,
 				39920223285B8DF60088325F /* Models */,
 				39D0396B285A6A6700378906 /* Details */,
 				5E941300285A28B9009531BF /* FavoriteViewController.swift */,
@@ -190,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9412FE285A172F009531BF /* RegisterViewController.swift in Sources */,
+				245D0DF6285E646400573E65 /* Colors.swift in Sources */,
 				5E9412E92859FB2B009531BF /* ViewController.swift in Sources */,
 				5E9412FA285A0F10009531BF /* HomeViewController.swift in Sources */,
 				5E941302285A28B9009531BF /* FavoriteViewController.swift in Sources */,
