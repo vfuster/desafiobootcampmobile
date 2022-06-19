@@ -8,22 +8,24 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    
+    // MARK: - Properties
     private let tableView = UITableView()
     
-
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setupUI()
+    }
+    
+    // MARK: - Setups
+    func setupUI() {
         setupView()
         setupTableView()
-        
     }
     
     func setupView(){
         title = "Home"
-        
+        view.backgroundColor = .white
     }
     
     func setupTableView() {
@@ -35,9 +37,4 @@ class HomeViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
-    
-    
-    
-    
-
 }
