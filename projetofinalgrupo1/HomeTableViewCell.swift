@@ -26,10 +26,12 @@ class HomeTableViewCell: UITableViewCell {
         addSubview(image)
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+        image.layer.cornerRadius = 8
         image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
         image.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         image.widthAnchor.constraint(equalToConstant: 65).isActive = true
         image.heightAnchor.constraint(equalToConstant: 65).isActive = true
+        
     }
     
     func setupTitle() {

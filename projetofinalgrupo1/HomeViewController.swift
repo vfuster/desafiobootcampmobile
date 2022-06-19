@@ -2,6 +2,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    
     // MARK: - Properties
     private let tableView = UITableView()
     
@@ -20,6 +21,9 @@ class HomeViewController: UIViewController {
     func setupView(){
         title = "Home"
         view.backgroundColor = .white
+        let textColor = [NSAttributedString.Key.foregroundColor:UIColor(red: 0.08, green: 0.55, blue: 0.75, alpha: 1.00)]
+        navigationController?.navigationBar.titleTextAttributes = textColor
+        
     }
     
     func setupTableView() {
