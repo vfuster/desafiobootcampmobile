@@ -31,9 +31,10 @@ class TabBarViewController: UITabBarController {
     }
     
     private func registerController()  -> UINavigationController {
-        let registerController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        let registerController = RegisterViewController()
         registerController.tabBarItem = UITabBarItem(title: "Cadastrar", image: UIImage(systemName:"plus.circle"), tag: 0)
         let navigationController = UINavigationController(rootViewController: registerController)
+        navigationController.setNavigationBarHidden(false, animated: false)
         return navigationController
     }
     

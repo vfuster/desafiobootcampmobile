@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="projetofinalgrupo1" customModuleProvider="target">
             <connections>
+                <outlet property="animalAge" destination="UUB-s7-lNo" id="rbX-vc-chs"/>
+                <outlet property="animalDescription" destination="ahl-Gc-hxN" id="eXY-Yk-kUP"/>
+                <outlet property="animalImageLink" destination="MVz-rd-tUy" id="lBH-Pu-ZhC"/>
+                <outlet property="animalName" destination="E4t-CA-rFG" id="1DH-W2-Jfl"/>
+                <outlet property="animalSpecies" destination="6QR-Bw-Uce" id="ZM9-y2-OrM"/>
+                <outlet property="registerButton" destination="xFK-hv-Res" id="JwP-4k-Uer"/>
                 <outlet property="view" destination="tJT-wJ-IeC" id="NY6-Kh-dPg"/>
             </connections>
         </placeholder>
@@ -20,10 +26,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r65-AC-etL">
-                    <rect key="frame" x="0.0" y="44" width="414" height="391"/>
+                    <rect key="frame" x="8" y="44" width="398" height="419"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-CA-rFG">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="cee-F5-ZCG"/>
                             </constraints>
@@ -31,15 +37,15 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link Imagem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVz-rd-tUy">
-                            <rect key="frame" x="0.0" y="72" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="72" width="398" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="6HR-SE-ZA6"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-Gc-hxN">
-                            <rect key="frame" x="0.0" y="144" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="144" width="398" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="PbL-NV-dUp"/>
                             </constraints>
@@ -47,7 +53,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Especie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QR-Bw-Uce">
-                            <rect key="frame" x="0.0" y="216" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="216" width="398" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="2F5-2d-gcX"/>
                             </constraints>
@@ -55,15 +61,15 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-s7-lNo">
-                            <rect key="frame" x="0.0" y="288" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="288" width="398" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="KcM-9E-2Qx"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFK-hv-Res">
-                            <rect key="frame" x="0.0" y="360" width="414" height="31"/>
+                            <rect key="frame" x="0.0" y="360" width="398" height="59"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="59" id="Hh5-lX-AQX"/>
                             </constraints>
@@ -76,9 +82,8 @@
             <viewLayoutGuide key="safeArea" id="n4J-n9-dP1"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="n4J-n9-dP1" firstAttribute="trailing" secondItem="r65-AC-etL" secondAttribute="trailing" id="9RJ-pG-2Wu"/>
-                <constraint firstItem="r65-AC-etL" firstAttribute="leading" secondItem="n4J-n9-dP1" secondAttribute="leading" id="a1s-Zy-HhF"/>
-                <constraint firstItem="n4J-n9-dP1" firstAttribute="bottom" secondItem="r65-AC-etL" secondAttribute="bottom" id="auc-kE-84I"/>
+                <constraint firstItem="n4J-n9-dP1" firstAttribute="trailing" secondItem="r65-AC-etL" secondAttribute="trailing" constant="8" id="9RJ-pG-2Wu"/>
+                <constraint firstItem="r65-AC-etL" firstAttribute="leading" secondItem="n4J-n9-dP1" secondAttribute="leading" constant="8" id="a1s-Zy-HhF"/>
                 <constraint firstItem="r65-AC-etL" firstAttribute="top" secondItem="n4J-n9-dP1" secondAttribute="top" id="ct9-jR-JUA"/>
             </constraints>
             <point key="canvasLocation" x="112" y="-698"/>

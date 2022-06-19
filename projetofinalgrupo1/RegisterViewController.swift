@@ -9,21 +9,31 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    //MARK: Outlets
+    
+    @IBOutlet private weak var animalName: UITextField!
+    @IBOutlet private weak var animalImageLink: UITextField!
+    @IBOutlet private weak var animalDescription: UITextField!
+    @IBOutlet private weak var animalSpecies: UITextField!
+    @IBOutlet private weak var animalAge: UITextField!
+    @IBOutlet private weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupButton()
+    }
+
+    private func setupView() {
+        title = "Cadastrar"
         view.backgroundColor = .white
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setupButton() {
+        registerButton.backgroundColor = UIColor().getPurple()
+        registerButton.tintColor = .white
+        registerButton.layer.cornerRadius = 8.0
     }
-    */
+    
 
 }
