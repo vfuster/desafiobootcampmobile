@@ -8,7 +8,7 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+    
     //MARK: Outlets
     
     @IBOutlet private weak var animalName: UITextField!
@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
         setupView()
         setupButton()
     }
-
+    
     private func setupView() {
         title = "Cadastrar"
         view.backgroundColor = .white
@@ -61,7 +61,7 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        print(name, linkImage, description, species, ageAsInt)
+        request(name: name, description: description, age: ageAsInt, species: species, image: linkImage)
     }
     
     private func isValidUrl(urlString: String) -> Bool {
@@ -84,4 +84,60 @@ class RegisterViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func request(name: String, description: String, age: Int, species: String, image: String) {
+        
+        guard let url = URL(string: "https://bootcamp-ios-api.herokuapp.com/api/v1/animals") else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+//        let body: [String : Any] = [
+//            "name": name,
+//            "description": description,
+//            "age": ageAsInt,
+//            "species": species,
+//            "image": linkImage
+//        ]
+        
+//        abordagem com Data + dicionário
+//        guard let bodyData = try? JSONSerialization.data(withJSONObject: body, options: []) else {
+//            return
+//        }
+//        request.httpBody = bodyData
+        
+//        abordagem com encode utf8
+//        let bodyData = body.description.data(using: .utf8)
+//        request.httpBody = bodyData
+        
+        let animal = AnimalRequest(name: name, description: description, age: age, species: species, image: image)
+        
+        let jsonData = try? JSONEncoder().encode(animal)
+        request.httpBody = jsonData
+        
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            // Check for Error
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+     
+            // Convert HTTP Response Data to a String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string:\n \(dataString)")
+            }
+        }
+        task.resume()
+    }
+}
+
+private struct AnimalRequest: Encodable {
+    let name: String
+    let description: String
+    let age: Int
+    let species: String
+    let image: String
 }
