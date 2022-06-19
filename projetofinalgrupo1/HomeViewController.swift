@@ -1,10 +1,3 @@
-//
-//  RedViewController.swift
-//  projetofinalgrupo1
-//
-//  Created by Amanda Karolina Santos da Fonseca Paiva on 15/06/22.
-//
-
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -48,7 +41,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 10 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
