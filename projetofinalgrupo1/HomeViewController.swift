@@ -37,25 +37,23 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "identifier")
         tableView.rowHeight = 81
-        
-        
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 
+        return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
         // usar essa função cell.setupCell(...) para preencher a célula com as informações da API, por exemplo:
-//        cell.setupCell(
-//            image: UIImage(),
-//            title: "Bichinho",
-//            subtitle: "Descrição do bichinho",
-//            isFavorite: false
-//        )
+        //        cell.setupCell(
+        //            image: UIImage(),
+        //            title: "Bichinho",
+        //            subtitle: "Descrição do bichinho",
+        //            isFavorite: false
+        //        )
         return cell
     }
 }
