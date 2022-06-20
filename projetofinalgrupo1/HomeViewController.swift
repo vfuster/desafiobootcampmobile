@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .white
         let textColor = [NSAttributedString.Key.foregroundColor:UIColor(red: 0.08, green: 0.55, blue: 0.75, alpha: 1.00)]
         navigationController?.navigationBar.titleTextAttributes = textColor
-        
     }
     
     func setupTableView() {
@@ -49,6 +48,14 @@ extension HomeViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
+        
+        // usar essa função cell.setupCell(...) para preencher a célula com as informações da API, por exemplo:
+//        cell.setupCell(
+//            image: UIImage(),
+//            title: "Bichinho",
+//            subtitle: "Descrição do bichinho",
+//            isFavorite: false
+//        )
         return cell
     }
 }

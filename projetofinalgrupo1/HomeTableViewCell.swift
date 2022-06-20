@@ -3,18 +3,24 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
  
     // MARK: - Properties
-    let image = UIImageView()
-    let title = UILabel()
-    let subtitle = UILabel()
-    let starButtom = UIButton(type: .system)
-
+    private let petImageView = UIImageView()
+    private let titleLabel = UILabel()
+    private let subtitleLabel = UILabel()
+    private let starButton = UIButton(type: .system)
+    private let filledStarImage = UIImage(named: "fav_star_filled")?
+        .withRenderingMode(.alwaysTemplate)
+    private let emptyStarImage = UIImage(named: "fav_star_empty")?
+        .withRenderingMode(.alwaysTemplate)
+    private let filledStarColor = UIColor(red: 1.00, green: 0.67, blue: 0.29, alpha: 1.00)
+    private let emptyStarColor = UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.00)
+    
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupImage()
         setupTitle()
         setupSubtitle()
-        setupFavoriteButtom()
+        setupFavoriteButton()
     }
     
     required init?(coder: NSCoder) {
@@ -22,55 +28,73 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     // MARK: - Setup
-    func setupImage() {
-        addSubview(image)
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
-        image.layer.cornerRadius = 8
-        image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        image.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 65).isActive = true
-        image.heightAnchor.constraint(equalToConstant: 65).isActive = true
-        
+    
+    func setupCell(image: UIImage, title: String, subtitle: String, isFavorite: Bool) {
+        petImageView.image = image
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
+        if isFavorite {
+            setFavoriteImage()
+        } else {
+            setUnfavoriteImage()
+        }
     }
     
-    func setupTitle() {
-        addSubview(title)
-        title.text = "Bichinho"
-        title.translatesAutoresizingMaskIntoConstraints = false
-        title.textColor = UIColor(red: 0.08, green: 0.55, blue: 0.75, alpha: 1.00)
-        title.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 12).isActive = true
-        title.topAnchor.constraint(equalTo: topAnchor, constant: 17).isActive = true
-        title.widthAnchor.constraint(equalToConstant: 226).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 27).isActive = true
+    private func setupImage() {
+        addSubview(petImageView)
+        petImageView.translatesAutoresizingMaskIntoConstraints = false
+        petImageView.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+        petImageView.layer.cornerRadius = 8
+        petImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
+        petImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        petImageView.widthAnchor.constraint(equalToConstant: 65).isActive = true
+        petImageView.heightAnchor.constraint(equalToConstant: 65).isActive = true
     }
     
-    func setupSubtitle() {
-        addSubview(subtitle)
-        subtitle.text = "Descrição do bichinho"
-        subtitle.translatesAutoresizingMaskIntoConstraints = false
-        subtitle.textColor = UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.00)
-        subtitle.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 12).isActive = true
-        subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 2).isActive = true
-        subtitle.widthAnchor.constraint(equalToConstant: 226).isActive = true
-        subtitle.heightAnchor.constraint(equalToConstant: 18).isActive = true
+    private func setupTitle() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = UIColor(red: 0.08, green: 0.55, blue: 0.75, alpha: 1.00)
+        titleLabel.leadingAnchor.constraint(equalTo: petImageView.trailingAnchor, constant: 12).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 17).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 226).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 27).isActive = true
     }
     
-    func setupFavoriteButtom() {
-        addSubview(starButtom)
-        accessoryView = starButtom
-        starButtom.frame = CGRect(x: 0, y: 0, width: 22.09, height: 21.07)
-        starButtom.setImage(
-            UIImage(named: "fav_star_empty")?
-                .withRenderingMode(.alwaysTemplate),
-            for: .normal)
-        tintColor = UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.00)
-        
-        starButtom.translatesAutoresizingMaskIntoConstraints = false
-        starButtom.topAnchor.constraint(equalTo: topAnchor, constant: 31).isActive = true
-        starButtom.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 17).isActive = true
-        
-      //  starButtom.addTarget(self, action: #selector(handleMarkAsFavorite), for: .touchUpInside)
-        
+    private func setupSubtitle() {
+        addSubview(subtitleLabel)
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textColor = UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.00)
+        subtitleLabel.leadingAnchor.constraint(equalTo: petImageView.trailingAnchor, constant: 12).isActive = true
+        subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
+        subtitleLabel.widthAnchor.constraint(equalToConstant: 226).isActive = true
+        subtitleLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
+    }
+    
+    private func setupFavoriteButton() {
+        accessoryView = starButton
+        starButton.frame = CGRect(x: 0, y: 0, width: 22.09, height: 21.07)
+      
+        starButton.addTarget(
+            self,
+            action: #selector(didTapFavoriteButton),
+            for: .touchUpInside
+        )
+    }
+    
+    private func setFavoriteImage() {
+        starButton.setImage(filledStarImage, for: .normal)
+        tintColor = filledStarColor
+    }
+    
+    private func setUnfavoriteImage() {
+        starButton.setImage(emptyStarImage, for: .normal)
+        tintColor = emptyStarColor
+    }
+    
+    @objc private func didTapFavoriteButton() {
+        // preencher aqui com ação de favoritar [:
+        // caso o botão seja apertado, usar setFavoriteImage() para favoritar,
+        // ou, caso contrário, usar setUnfavoriteImage()
     }
 }
