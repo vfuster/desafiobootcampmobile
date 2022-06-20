@@ -185,11 +185,7 @@
 				5E9412F12859FB2C009531BF /* LaunchScreen.storyboard in Resources */,
 				5E94130B285A2B69009531BF /* TabBarViewController.xib in Resources */,
 				5E9412EE2859FB2C009531BF /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
-				5E9412EC2859FB2B009531BF /* Main.storyboard in Resources */,
 				39D0396F285A6A9000378906 /* DetailsViewController.xib in Resources */,
-=======
->>>>>>> 3bd9d29 (setup project for Xib use)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,12 +197,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9412FE285A172F009531BF /* RegisterViewController.swift in Sources */,
-<<<<<<< HEAD
 				245D0DF6285E646400573E65 /* Colors.swift in Sources */,
-				5E9412E92859FB2B009531BF /* ViewController.swift in Sources */,
-=======
 				71F3A130285F81F400FB2D6E /* HomeTableViewCell.swift in Sources */,
->>>>>>> 3bd9d29 (setup project for Xib use)
 				5E9412FA285A0F10009531BF /* HomeViewController.swift in Sources */,
 				5E941302285A28B9009531BF /* FavoriteViewController.swift in Sources */,
 				39D0396E285A6A9000378906 /* DetailsViewController.swift in Sources */,
