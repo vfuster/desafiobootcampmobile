@@ -36,27 +36,27 @@ class RegisterViewController: UIViewController {
     
     @IBAction func register(_ sender: Any) {
         guard let name = animalName.text, isValidString(string: name) else {
-            showErrorAlert(message: "Informe um nome válido")
+            showAlert(message: "Informe um nome válido")
             return
         }
         
         guard let linkImage = animalImageLink.text, isValidUrl(urlString: linkImage) else {
-            showErrorAlert(message: "Informe um link válido")
+            showAlert(message: "Informe um link válido")
             return
         }
         
         guard let description = animalDescription.text, isValidString(string: description) else {
-            showErrorAlert(message: "Informe uma descrição válida")
+            showAlert(message: "Informe uma descrição válida")
             return
         }
         
         guard let species = animalSpecies.text, isValidString(string: species) else {
-            showErrorAlert(message: "Informe uma espécie válida")
+            showAlert(message: "Informe uma espécie válida")
             return
         }
         
         guard let age = animalAge.text, isValidString(string: age), let ageAsInt = Int(age) else {
-            showErrorAlert(message: "Informe uma idade válida")
+            showAlert(message: "Informe uma idade válida")
             return
         }
         
@@ -77,20 +77,26 @@ class RegisterViewController: UIViewController {
         
         let jsonData = try? JSONEncoder().encode(animal)
         request.httpBody = jsonData
-                
-        // Perform HTTP Request
+        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            // Check for Error
+            
             if let error = error {
-                print("Error took place \(error)")
-                //tratar erro
+                print(error)
+                
+                DispatchQueue.main.async {
+                    self.showAlert(message: "Ocorreu um erro ao cadastrar, tente novamente!")
+                }
                 return
-            }
-     
-            // Convert HTTP Response Data to a String
-            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response data string:\n \(dataString)")
-                // tratar sucesso
+            } else {
+                DispatchQueue.main.async {
+                    self.animalName.text = ""
+                    self.animalAge.text = ""
+                    self.animalSpecies.text = ""
+                    self.animalImageLink.text = ""
+                    self.animalDescription.text = ""
+                    
+                    self.showAlert(message: "Animal cadastrado com sucesso!")
+                }
             }
         }
         task.resume()
@@ -109,7 +115,7 @@ class RegisterViewController: UIViewController {
         return string.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
     
-    private func showErrorAlert(message: String) {
+    private func showAlert(message: String) {
         let alert = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
