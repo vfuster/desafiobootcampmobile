@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		245D0DF6285E646400573E65 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D0DF5285E646400573E65 /* Colors.swift */; };
+		24E9E0BD2862BB6C0007DCA2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9E0BC2862BB6C0007DCA2 /* Animal.swift */; };
 		39920225285B8E640088325F /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39920224285B8E640088325F /* AnimalModel.swift */; };
 		39D0396E285A6A9000378906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D0396C285A6A9000378906 /* DetailsViewController.swift */; };
 		39D0396F285A6A9000378906 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D0396D285A6A9000378906 /* DetailsViewController.xib */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		245D0DF5285E646400573E65 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		24E9E0BC2862BB6C0007DCA2 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		39920224285B8E640088325F /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		39D0396C285A6A9000378906 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		39D0396D285A6A9000378906 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				39920224285B8E640088325F /* AnimalModel.swift */,
+				24E9E0BC2862BB6C0007DCA2 /* Animal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				5E94130A285A2B69009531BF /* TabBarViewController.swift in Sources */,
 				5E9412E52859FB2B009531BF /* AppDelegate.swift in Sources */,
 				39920225285B8E640088325F /* AnimalModel.swift in Sources */,
+				24E9E0BD2862BB6C0007DCA2 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,8 +29,7 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Setup
     
-    func setupCell(image: UIImage, title: String, subtitle: String, isFavorite: Bool) {
-        petImageView.image = image
+    func setupCell(imageUrl: String, title: String, subtitle: String, isFavorite: Bool) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         if isFavorite {
@@ -38,6 +37,19 @@ class HomeTableViewCell: UITableViewCell {
         } else {
             setUnfavoriteImage()
         }
+        
+        guard let url = URL(string: imageUrl) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, responseError) in
+            
+            if let imageData = data {
+                DispatchQueue.main.async {
+                    self.petImageView.image = UIImage(data: imageData)
+                }
+            }
+        }
+        task.resume()
     }
     
     private func setupImage() {

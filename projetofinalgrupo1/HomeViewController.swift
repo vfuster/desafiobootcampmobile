@@ -6,11 +6,47 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     private let tableView = UITableView()
     
+    private var animals: [Animal] = []
+    
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()  
+        setupUI()
+        requestAnimals()
     }
+    
+    private func requestAnimals() {
+        
+        guard let url = URL(string: "https://bootcamp-ios-api.herokuapp.com/api/v1/animals") else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let animalResponse = try decoder.decode(AnimalResponse.self, from: data)
+                    self.animals = animalResponse.items
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }
+        task.resume()
+    }
+    
     
     // MARK: - Setups
     func setupUI() {
@@ -42,18 +78,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return animals.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
-        // usar essa função cell.setupCell(...) para preencher a célula com as informações da API, por exemplo:
-        //        cell.setupCell(
-        //            image: UIImage(),
-        //            title: "Bichinho",
-        //            subtitle: "Descrição do bichinho",
-        //            isFavorite: false
-        //        )
+        let currentAnimal = animals[indexPath.row]
+        cell.setupCell(
+            imageUrl: currentAnimal.image,
+            title: currentAnimal.name,
+            subtitle: currentAnimal.description,
+            isFavorite: false
+        )
         return cell
     }
 }
