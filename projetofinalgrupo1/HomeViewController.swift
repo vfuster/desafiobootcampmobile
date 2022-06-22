@@ -71,12 +71,13 @@ class HomeViewController: UIViewController {
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "identifier")
         tableView.rowHeight = 81
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animals.count
     }
@@ -91,5 +92,11 @@ extension HomeViewController: UITableViewDataSource {
             isFavorite: false
         )
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentAnimal = animals[indexPath.row]
+        let viewController = DetailsViewController(animalModel: currentAnimal)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -13,10 +13,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var specieLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
-    private let animalModel: AnimalModel
+    private let animalModel: Animal
     
-    init(animalModel: AnimalModel) {
+    init(animalModel: Animal) {
         self.animalModel = animalModel
         super.init(nibName: nil, bundle: nil)
         
@@ -32,6 +33,7 @@ class DetailsViewController: UIViewController {
         navigationItem.title = "Detalhes"
         setupData()
         imageView.layer.cornerRadius = 8
+        imageView.contentMode = .scaleAspectFill
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,9 +45,28 @@ class DetailsViewController: UIViewController {
     }
     
     private func setupData(){
-        imageView.image = animalModel.image
+        loading.startAnimating()
+        setupImage(imageUrl: animalModel.image)
         nameLabel.text = animalModel.name
-        specieLabel.text = animalModel.specie
+        specieLabel.text = animalModel.species
         descriptionLabel.text = animalModel.description
+    }
+    
+    private func setupImage(imageUrl: String){
+        
+        guard let url = URL(string: imageUrl) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, responseError) in
+            
+            if let imageData = data {
+                DispatchQueue.main.async {
+                    self.imageView.image = UIImage(data: imageData)
+                    self.loading.stopAnimating()
+                    self.loading.isHidden = true
+                }
+            }
+        }
+        task.resume()
     }
 }

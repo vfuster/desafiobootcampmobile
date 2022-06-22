@@ -1,9 +1,3 @@
-//
-//  Animal.swift
-//  projetofinalgrupo1
-//
-//  Created by Valeria Fuster on 21/06/22.
-//
 
 import Foundation
 
