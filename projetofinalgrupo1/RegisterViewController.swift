@@ -73,25 +73,7 @@ class RegisterViewController: UIViewController {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-//        let body: [String : Any] = [
-//            "name": name,
-//            "description": description,
-//            "age": ageAsInt,
-//            "species": species,
-//            "image": linkImage
-//        ]
-        
-//        abordagem com Data + dicionário
-//        guard let bodyData = try? JSONSerialization.data(withJSONObject: body, options: []) else {
-//            return
-//        }
-//        request.httpBody = bodyData
-        
-//        abordagem com encode utf8
-//        let bodyData = body.description.data(using: .utf8)
-//        request.httpBody = bodyData
-        
-        let animal = AnimalRequest(name: name, description: description, age: age, species: species, image: image)
+        let animal = Animal(name: name, description: description, age: age, species: species, image: image)
         
         let jsonData = try? JSONEncoder().encode(animal)
         request.httpBody = jsonData
@@ -135,12 +117,4 @@ class RegisterViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-}
-
-private struct AnimalRequest: Encodable {
-    let name: String
-    let description: String
-    let age: Int
-    let species: String
-    let image: String
 }
